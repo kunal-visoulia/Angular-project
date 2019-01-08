@@ -16,8 +16,8 @@
 
 <h1>Users</h1>
 <div id="content">
-<ul>
-  <li *ngFor="let user of user">
+    <ul [@listStagger]="user">
+        <li *ngFor="let user of user">
     <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
 
     <ul>

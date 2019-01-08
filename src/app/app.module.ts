@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PostsComponent } from './posts/posts.component';
 import { DetailsComponent } from './details/details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DetailsComponent } from './details/details.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+  BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
