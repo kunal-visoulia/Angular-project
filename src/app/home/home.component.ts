@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedDataBwComponentsService } from '../shared-data-bw-components.service';
+import { GetPostsService } from '../get-posts.service';
 
 @Component({
   selector: 'app-home',
@@ -8,20 +8,19 @@ import { SharedDataBwComponentsService } from '../shared-data-bw-components.serv
 })
 export class HomeComponent implements OnInit {
 h1Style:boolean=false;
-users:Object;
+user:Object;
 
-// creating an instance of it through dependency injection within the constructor()  
-constructor(private data: SharedDataBwComponentsService) { }
+  constructor(private data:GetPostsService) { }
 
-// a lifecycle hook for Angular. Any code placed in here will run when the component is loaded.
   ngOnInit() {
     this.data.getUsers().subscribe(data=>{
-      this.users=data;
-      console.log(this.users);
+      this.user=data
+    console.log(this.user);
+
     });
   }
 
 firstClick(){
-this.data.firstClick();
+console.log("aa");
 }
 }

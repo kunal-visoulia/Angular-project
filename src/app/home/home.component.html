@@ -15,10 +15,18 @@
 }">Home</h1>
 
 <h1>Users</h1>
-<ul *ngIf="users">
-  <li *ngFor="let user of users.data">
-    <img [src]="user.avatar">
-    <p>{{user.first_name}} {{user.last_name}}</p>
+<div id="content">
+<ul>
+  <li *ngFor="let user of user">
+    <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
+
+    <ul>
+      <li>{{ user.email }}</li>
+      <li></li>
+      <li><a href="http://{{ user.website }}">{{ user.website }}</a></li>
+    </ul>
+  
   </li>
 </ul>
+</div>
 <button (click)="firstClick()">Click me</button>
