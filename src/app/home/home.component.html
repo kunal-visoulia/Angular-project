@@ -1,0 +1,24 @@
+<!-- <h1 [class.gray]="h1Style" >Home</h1> -->
+<!-- gray should only be attached to the h1 element if the property h1Style results to true. -->
+
+<!-- for aplying multip;le classes -->
+<!-- <h1 [ngClass]="{
+  'gray': h1Style,
+  'large': !h1Style
+}">Home</h1> -->
+
+<!-- changing the styles directly from within the template. -->
+<!-- <h1 [style.color]="h1Style ? 'gray': 'black'">Home</h1> -->
+<h1 [ngStyle]="{
+  'color': h1Style ? 'gray' : 'black',
+  'font-size': !h1Style ? '1em' : '4em'
+}">Home</h1>
+
+<h1>Users</h1>
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p>{{user.first_name}} {{user.last_name}}</p>
+  </li>
+</ul>
+<button (click)="firstClick()">Click me</button>
