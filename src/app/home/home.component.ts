@@ -46,5 +46,6 @@ user:Object;
 
 firstClick(){
 console.log("aa");
+this.h1Style=!this.h1Style;
 }
 }
