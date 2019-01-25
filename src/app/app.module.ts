@@ -12,6 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PostsComponent } from './posts/posts.component';
 import { DetailsComponent } from './details/details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeroesComponent } from './heroes/heroes.component';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactComponent,
     HomeComponent,
     PostsComponent,
-    DetailsComponent
+    DetailsComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ReactiveFormsModule,
   BrowserAnimationsModule,
+  FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
