@@ -13,7 +13,8 @@ import { PostsComponent } from './posts/posts.component';
 import { DetailsComponent } from './details/details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroesComponent } from './heroes/heroes.component';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
     HomeComponent,
     PostsComponent,
     DetailsComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent,
   ],
   imports: [
     BrowserModule,
